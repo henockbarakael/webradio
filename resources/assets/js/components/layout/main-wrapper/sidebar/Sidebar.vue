@@ -2,14 +2,14 @@
   <nav id="sidebar" v-koel-clickaway="closeIfMobile" :class="{ showing: mobileShowing }" class="side side-nav">
     <SearchForm />
     <section class="music">
-      <h1>Your Music</h1>
+      <h1>CENTRE MISS. DE BINZA</h1>
 
       <ul class="menu">
-        <SidebarItem screen="Home" href="#/home" :icon="faHome">Home</SidebarItem>
+        <SidebarItem screen="Home" href="#/home" :icon="faHome">Accueil</SidebarItem>
         <QueueSidebarItem />
-        <SidebarItem screen="Songs" href="#/songs" :icon="faMusic">All Songs</SidebarItem>
+        <SidebarItem screen="Songs" href="#/songs" :icon="faMusic">Tous les audio</SidebarItem>
         <SidebarItem screen="Albums" href="#/albums" :icon="faCompactDisc">Albums</SidebarItem>
-        <SidebarItem screen="Artists" href="#/artists" :icon="faMicrophone">Artists</SidebarItem>
+        <SidebarItem screen="Artists" href="#/artists" :icon="faMicrophone">Prédicateurs</SidebarItem>
         <SidebarItem screen="Genres" href="#/genres" :icon="faTags">Genres</SidebarItem>
         <YouTubeSidebarItem v-show="showYouTube" />
       </ul>
