@@ -21,9 +21,9 @@ class InitCommand extends Command
 {
     use AskForPassword;
 
-    private const DEFAULT_ADMIN_NAME = 'Koel';
-    private const DEFAULT_ADMIN_EMAIL = 'admin@koel.dev';
-    private const DEFAULT_ADMIN_PASSWORD = 'KoelIsCool';
+    private const DEFAULT_ADMIN_NAME = 'Henock';
+    private const DEFAULT_ADMIN_EMAIL = 'barahenock@gmail.com';
+    private const DEFAULT_ADMIN_PASSWORD = 'Juillet@91';
     private const NON_INTERACTION_MAX_DATABASE_ATTEMPT_COUNT = 10;
 
     protected $signature = 'koel:init {--no-assets}';
