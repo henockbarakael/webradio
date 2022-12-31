@@ -4,7 +4,7 @@ import { userStore } from '@/stores'
 
 export const routes: Route[] = [
   {
-    path: '/home',
+    path: '/accueil',
     screen: 'Home'
   },
   {
@@ -16,7 +16,7 @@ export const routes: Route[] = [
     screen: 'Queue'
   },
   {
-    path: '/songs',
+    path: '/predications',
     screen: 'Songs'
   },
   {
@@ -24,11 +24,11 @@ export const routes: Route[] = [
     screen: 'Albums'
   },
   {
-    path: '/artists',
+    path: '/predicateurs',
     screen: 'Artists'
   },
   {
-    path: '/favorites',
+    path: '/Favorites',
     screen: 'Favorites'
   },
   {

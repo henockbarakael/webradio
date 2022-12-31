@@ -30,7 +30,7 @@ export const queueStore = {
   },
 
   /**
-   * Add song(s) to the end of the current queue.
+   * Add song(s) to the end of the File d'attente actuelle.
    */
   queue (songs: Song | Song[]) {
     this.unqueue(songs)

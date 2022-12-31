@@ -21,7 +21,7 @@ declare namespace Cypress {
     $mockPlayback(): void
 
     /**
-     * Queue several songs from the "All Songs" screen.
+     * Queue several songs from the "Toutes les prédications" screen.
      * @param count
      */
     $shuffleSeveralSongs(count?: number): void

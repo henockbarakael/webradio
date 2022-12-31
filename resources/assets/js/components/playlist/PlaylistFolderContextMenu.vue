@@ -7,7 +7,7 @@
         <li class="separator" />
       </template>
       <li @click="createPlaylist">New Playlist…</li>
-      <li @click="createSmartPlaylist">New Smart Playlist…</li>
+      <li @click="createSmartPlaylist">Nouvelle liste de lecture intelligente ...</li>
       <li class="separator" />
       <li @click="rename">Rename</li>
       <li @click="destroy">Delete</li>

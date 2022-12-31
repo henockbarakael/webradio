@@ -45,19 +45,19 @@ new class extends UnitTestCase {
       expect(screen.getByTestId('song-list')).toBeTruthy()
     })
 
-    it('shuffles all songs without fetching if genre has <= 500 songs', async () => {
+    it('shuffles Toutes les prédications without fetching if genre has <= 500 songs', async () => {
       const genre = factory<Genre>('genre', { song_count: 10 })
       const songs = factory<Song>('song', 10)
       const playbackMock = this.mock(playbackService, 'queueAndPlay')
 
       await this.renderComponent(genre, songs)
 
-      await this.user.click(screen.getByTitle('Shuffle all songs'))
+      await this.user.click(screen.getByTitle('Mélangez toutes les prédications'))
 
       expect(playbackMock).toHaveBeenCalledWith(songs, true)
     })
 
-    it('fetches and shuffles all songs if genre has > 500 songs', async () => {
+    it('fetches and shuffles Toutes les prédications if genre has > 500 songs', async () => {
       const genre = factory<Genre>('genre', { song_count: 501 })
       const songs = factory<Song>('song', 10) // we don't really need to generate 501 songs
       const playbackMock = this.mock(playbackService, 'queueAndPlay')
@@ -65,7 +65,7 @@ new class extends UnitTestCase {
 
       await this.renderComponent(genre, songs)
 
-      await this.user.click(screen.getByTitle('Shuffle all songs'))
+      await this.user.click(screen.getByTitle('Mélangez toutes les prédications'))
 
       await waitFor(() => {
         expect(fetchMock).toHaveBeenCalledWith(genre, 500)

@@ -424,7 +424,7 @@ paths:
         in: path
         description: The maximum number of songs to be returned (optional)
     get:
-      summary: Get recently played songs
+      summary: Get Joué récemment songs
       tags:
         - interaction
       responses:
@@ -438,7 +438,7 @@ paths:
                 items:
                   type: string
       operationId: get-interaction-recently-played-count
-      description: Get a list of songs recently played by the current authenticated user
+      description: Get a list of songs Joué récemment by the current authenticated user
       security:
         - Bearer Token: [ ]
   /api/playlist:
@@ -1180,7 +1180,7 @@ paths:
         - search
       responses: { }
       operationId: get-api-search-songs
-      description: Get all songs that matches a search query.
+      description: Get Toutes les prédications that matches a search query.
       security:
         - Bearer Token: [ ]
       requestBody:

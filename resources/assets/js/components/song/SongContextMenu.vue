@@ -26,34 +26,34 @@
           <li v-for="p in normalPlaylists" :key="p.id" @click="addSongsToExistingPlaylist(p)">{{ p.name }}</li>
         </ul>
         <li class="separator" />
-        <li @click="addSongsToNewPlaylist">New Playlist…</li>
+        <li @click="addSongsToNewPlaylist">Nouvelle Playlist…</li>
       </ul>
     </li>
 
     <template v-if="isQueueScreen">
       <li class="separator" />
-      <li @click="removeFromQueue">Remove from Queue</li>
+      <li @click="removeFromQueue">Enlever de la file d'attente</li>
       <li class="separator" />
     </template>
 
     <template v-if="isFavoritesScreen">
       <li class="separator" />
-      <li @click="removeFromFavorites">Remove from Favorites</li>
+      <li @click="removeFromFavorites">Enlever de favoris</li>
       <li class="separator" />
     </template>
 
-    <li v-if="isAdmin" @click="openEditForm">Edit…</li>
-    <li v-if="allowDownload" @click="download">Download</li>
+    <li v-if="isAdmin" @click="openEditForm">Editer…</li>
+    <li v-if="allowDownload" @click="download">Télécharger</li>
     <li v-if="onlyOneSongSelected" @click="copyUrl">Copy Shareable URL</li>
 
     <template v-if="canBeRemovedFromPlaylist">
       <li class="separator" />
-      <li @click="removeFromPlaylist">Remove from Playlist</li>
+      <li @click="removeFromPlaylist">Enlever du Playlist</li>
     </template>
 
     <template v-if="isAdmin">
       <li class="separator" />
-      <li @click="deleteFromFilesystem">Delete from Filesystem</li>
+      <li @click="deleteFromFilesystem">Supprimer du Fichier Système</li>
     </template>
   </ContextMenuBase>
 </template>

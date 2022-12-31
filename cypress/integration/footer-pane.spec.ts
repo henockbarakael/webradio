@@ -3,7 +3,7 @@ context('Footer Pane', () => {
     cy.$login()
     cy.$mockPlayback()
 
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.$getSongRows().first().dblclick().within(function () {
       cy.get('.title').invoke('text').as('title')

@@ -18,7 +18,7 @@
               small
               @click.prevent="goToSongResults"
             >
-              View All
+              Tout afficher
             </Btn>
           </h1>
           <ul v-if="searching">
@@ -75,8 +75,8 @@
         <template #icon>
           <icon :icon="faSearch" />
         </template>
-        Find songs, artists, and albums,
-        <span class="secondary d-block">all in one place.</span>
+        Trouvez des prédications, des prédicateurs et des albums,
+        <span class="secondary d-block">tout en un seul endroit.</span>
       </ScreenEmptyState>
     </div>
   </section>

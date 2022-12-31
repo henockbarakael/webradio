@@ -55,15 +55,7 @@ const { isAdmin } = useAuthorization()
 const { showErrorDialog } = useDialogBox()
 
 const greetings = [
-  'Oh hai!',
-  'Hey, %s!',
-  'Howdy, %s!',
-  'Yo!',
-  'How’s it going, %s?',
-  'Sup, %s?',
-  'How’s life, %s?',
-  'How’s your day, %s?',
-  'How have you been, %s?'
+  'Bienvenue, %s!'
 ]
 
 const greeting = computed(() => sample(greetings)!.replace('%s', userStore.current?.name))

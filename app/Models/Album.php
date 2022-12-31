@@ -156,4 +156,5 @@ class Album extends Model
 
         return $array;
     }
+    
 }

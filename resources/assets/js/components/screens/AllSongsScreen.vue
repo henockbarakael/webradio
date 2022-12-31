@@ -1,7 +1,7 @@
 <template>
   <section id="songsWrapper">
     <ScreenHeader :layout="headerLayout">
-      All Songs
+      Toutes les prédications
       <ControlsToggle v-model="showingControls" />
 
       <template #thumbnail>

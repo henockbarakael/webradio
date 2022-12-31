@@ -1,7 +1,8 @@
 <?php
 
 return [
-    'tagline' => 'Personal audio streaming service that works.',
+    
+    // 'tagline' => 'Personal audio streaming service that works.',
 
     'env' => env('APP_ENV', 'production'),
     'name' => 'Koel',
@@ -200,4 +201,5 @@ return [
         'Download' => App\Facades\Download::class,
         'ITunes' => App\Facades\ITunes::class,
     ],
+    
 ];

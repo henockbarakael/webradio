@@ -36,7 +36,7 @@ new class extends UnitTestCase {
       const mock = this.mock(downloadService, 'fromAlbum')
       this.renderComponent()
 
-      await this.user.click(screen.getByTitle('Download all songs in the album IV'))
+      await this.user.click(screen.getByTitle('Télécharger toutes les prédications in the album IV'))
 
       expect(mock).toHaveBeenCalledTimes(1)
     })
@@ -54,7 +54,7 @@ new class extends UnitTestCase {
       const shuffleMock = this.mock(playbackService, 'queueAndPlay').mockResolvedValue(void 0)
       this.renderComponent()
 
-      await this.user.click(screen.getByTitle('Shuffle all songs in the album IV'))
+      await this.user.click(screen.getByTitle('Mélangez toutes les prédications in the album IV'))
       await this.tick()
 
       expect(fetchMock).toHaveBeenCalledWith(album)

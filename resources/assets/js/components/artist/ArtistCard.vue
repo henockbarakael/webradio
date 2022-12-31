@@ -13,7 +13,7 @@
     </template>
     <template #meta>
       <a
-        :title="`Shuffle all songs by ${artist.name}`"
+        :title="`Mélangez toutes les prédications by ${artist.name}`"
         class="shuffle-artist"
         role="button"
         @click.prevent="shuffle"
@@ -22,7 +22,7 @@
       </a>
       <a
         v-if="allowDownload"
-        :title="`Download all songs by ${artist.name}`"
+        :title="`Télécharger toutes les prédications by ${artist.name}`"
         class="download-artist"
         role="button"
         @click.prevent="download"

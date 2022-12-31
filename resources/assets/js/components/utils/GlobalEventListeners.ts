@@ -24,13 +24,13 @@ export const GlobalEventListeners = defineComponent({
       if (await showConfirmDialog(`Delete the playlist "${playlist.name}"?`)) {
         await playlistStore.delete(playlist)
         toastSuccess(`Playlist "${playlist.name}" deleted.`)
-        go('home')
+        go('accueil')
       }
     }).on('PLAYLIST_FOLDER_DELETE', async folder => {
       if (await showConfirmDialog(`Delete the playlist folder "${folder.name}"?`)) {
         await playlistFolderStore.delete(folder)
         toastSuccess(`Playlist folder "${folder.name}" deleted.`)
-        go('home')
+        go('accueil')
       }
     }).on('LOG_OUT', async () => {
       await userStore.logout()

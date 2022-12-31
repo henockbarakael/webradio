@@ -46,13 +46,13 @@ export const useDraggable = (type: DraggableType) => {
 
       case 'album':
         dragged = <Album>dragged
-        text = `All songs in ${dragged.name}`
+        text = `Toutes les prédications in ${dragged.name}`
         data = dragged.id
         break
 
       case 'artist':
         dragged = <Artist>dragged
-        text = `All songs by ${dragged.name}`
+        text = `Toutes les prédications by ${dragged.name}`
         data = dragged.id
         break
 

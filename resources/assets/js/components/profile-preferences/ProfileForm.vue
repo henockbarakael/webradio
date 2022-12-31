@@ -2,12 +2,12 @@
   <form data-testid="update-profile-form" @submit.prevent="update">
     <div class="form-row">
       <label>
-        Current Password
+        Mot De Passe Actuel
         <input
           v-model="profile.current_password"
           v-koel-focus
           name="current_password"
-          placeholder="Required to update your profile"
+          placeholder="Obligatoire pour mettre à jour votre profil"
           required
           type="password"
         >
@@ -16,40 +16,40 @@
 
     <div class="form-row">
       <label>
-        Name
+        Nom
         <input id="inputProfileName" v-model="profile.name" name="name" required type="text">
       </label>
     </div>
 
     <div class="form-row">
       <label>
-        Email Address
+        Adresse e-mail
         <input id="inputProfileEmail" v-model="profile.email" name="email" required type="email">
       </label>
     </div>
 
     <div class="form-row">
       <label>
-        New Password
+        Nouveau Mot De Passe
         <input
           id="inputProfileNewPassword"
           v-model="profile.new_password"
           autocomplete="new-password"
           name="new_password"
-          placeholder="Leave empty to keep current password"
+          placeholder="Laissez vide pour conserver le mot de passe actuel"
           type="password"
         >
         <span class="password-rules help">
-          Min. 10 characters. Should be a mix of characters, numbers, and symbols.
+          Min. 10 caractères. Il doit s'agir d'un mélange de caractères, de chiffres et de symboles.
         </span>
       </label>
     </div>
 
     <div class="form-row">
-      <Btn class="btn-submit" type="submit">Save</Btn>
-      <span v-if="isDemo()" class="demo-notice">
+      <Btn class="btn-submit" type="submit">Enregistrer</Btn>
+      <!-- <span v-if="isDemo()" class="demo-notice">
         Changes will not be saved in the demo version.
-      </span>
+      </span> -->
     </div>
   </form>
 </template>

@@ -13,7 +13,7 @@
           <AlbumCard :album="album" layout="compact" />
         </li>
       </ol>
-      <p v-else class="text-secondary">No albums found.</p>
+      <p v-else class="text-secondary">Aucun album trouvé.</p>
     </template>
   </section>
 </template>

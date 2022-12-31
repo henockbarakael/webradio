@@ -194,7 +194,7 @@ type FavoriteList = {
 }
 
 type RecentlyPlayedList = {
-  name: 'Recently Played'
+  name: 'Joué récemment'
   songs: Song[]
 }
 

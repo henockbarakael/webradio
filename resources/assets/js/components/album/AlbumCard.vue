@@ -16,7 +16,7 @@
 
     <template #meta>
       <a
-        :title="`Shuffle all songs in the album ${album.name}`"
+        :title="`Mélangez toutes les prédications dans l'album ${album.name}`"
         class="shuffle-album"
         role="button"
         @click.prevent="shuffle"
@@ -25,12 +25,12 @@
       </a>
       <a
         v-if="allowDownload"
-        :title="`Download all songs in the album ${album.name}`"
+        :title="`Télécharger toutes les prédications dans l'album ${album.name}`"
         class="download-album"
         role="button"
         @click.prevent="download"
       >
-        Download
+        Télécharger
       </a>
     </template>
   </ArtistAlbumCard>

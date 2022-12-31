@@ -8,7 +8,7 @@
     @dragover.prevent="onQueueDragOver"
     @drop="onQueueDrop"
   >
-    Current Queue
+    File d'attente actuelle
   </SidebarItem>
 </template>
 
@@ -37,9 +37,9 @@ const onQueueDrop = async (event: DragEvent) => {
 
   if (songs.length) {
     queueStore.queue(songs)
-    toastSuccess(`Added ${ pluralize(songs, 'song') } to queue.`)
+    toastSuccess(`Ajouté ${ pluralize(songs, 'prédication') } à la file.`)
   } else {
-    toastWarning('No applicable songs to queue.')
+    toastWarning('Aucune prédication applicable à la file d\'attente.')
   }
 
   return false

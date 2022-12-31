@@ -5,12 +5,12 @@
       <h1>CENTRE MISS. DE BINZA</h1>
 
       <ul class="menu">
-        <SidebarItem screen="Home" href="#/home" :icon="faHome">Accueil</SidebarItem>
+        <SidebarItem screen="Home" href="#/accueil" :icon="faHome">Accueil</SidebarItem>
         <QueueSidebarItem />
-        <SidebarItem screen="Songs" href="#/songs" :icon="faMusic">Tous les audio</SidebarItem>
+        <SidebarItem screen="Songs" href="#/predications" :icon="faMusic">Toutes les prédications</SidebarItem>
         <SidebarItem screen="Albums" href="#/albums" :icon="faCompactDisc">Albums</SidebarItem>
-        <SidebarItem screen="Artists" href="#/artists" :icon="faMicrophone">Prédicateurs</SidebarItem>
-        <SidebarItem screen="Genres" href="#/genres" :icon="faTags">Genres</SidebarItem>
+        <SidebarItem screen="Artists" href="#/predicateurs" :icon="faMicrophone">Prédicateurs</SidebarItem>
+        <SidebarItem screen="Genres" href="#/dates" :icon="faTags">Dates</SidebarItem>
         <YouTubeSidebarItem v-show="showYouTube" />
       </ul>
     </section>

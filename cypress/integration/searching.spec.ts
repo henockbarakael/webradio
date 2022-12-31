@@ -23,7 +23,7 @@ context('Searching', () => {
     })
   })
 
-  it('has a button to view all matching songs', () => {
+  it('has a button to Tout afficher matching songs', () => {
     cy.intercept('/api/search?q=foo', {
       fixture: 'search-excerpts.get.200.json'
     })
@@ -42,7 +42,7 @@ context('Searching', () => {
     })
   })
 
-  it('does not have a View All button if no songs are found', () => {
+  it('does not have a Tout afficher button if no songs are found', () => {
     cy.fixture('search-excerpts.get.200.json').then(data => {
       data.results.songs = []
 

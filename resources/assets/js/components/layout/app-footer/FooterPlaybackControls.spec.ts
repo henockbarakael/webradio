@@ -41,7 +41,7 @@ new class extends UnitTestCase {
       const playMock = this.mock(playbackService, 'playPrev')
       this.renderComponent()
 
-      await this.user.click(screen.getByRole('button', { name: 'Play previous song' }))
+      await this.user.click(screen.getByRole('button', { name: 'Ecouter la prédication précédente' }))
 
       expect(playMock).toHaveBeenCalled()
     })
@@ -50,7 +50,7 @@ new class extends UnitTestCase {
       const playMock = this.mock(playbackService, 'playNext')
       this.renderComponent()
 
-      await this.user.click(screen.getByRole('button', { name: 'Play next song' }))
+      await this.user.click(screen.getByRole('button', { name: 'Ecouter la prédication suivante' }))
 
       expect(playMock).toHaveBeenCalled()
     })

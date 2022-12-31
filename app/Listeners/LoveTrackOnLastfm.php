@@ -14,8 +14,7 @@ class LoveTrackOnLastfm implements ShouldQueue
 
     public function handle(SongLikeToggled $event): void
     {
-        if (
-            !LastfmService::enabled() ||
+        if (!LastfmService::enabled() ||
             !$event->interaction->user->lastfm_session_key ||
             $event->interaction->song->artist->is_unknown
         ) {

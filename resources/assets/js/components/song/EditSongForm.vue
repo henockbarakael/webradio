@@ -55,7 +55,7 @@
         >
           <div v-if="editingOnlyOneSong" class="form-row">
             <label>
-              Title
+              Titre
               <input
                 v-model="formData.title"
                 v-koel-focus

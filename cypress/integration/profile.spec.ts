@@ -1,11 +1,11 @@
-context('Profiles & Preferences', () => {
+context('Profiles & Préférences', () => {
   it('shows the current user\'s profile', () => {
     cy.$login()
     cy.findByTestId('view-profile-link').click()
     cy.url().should('contain', '/#!/profile')
 
     cy.get('#profileWrapper').within(() => {
-      cy.get('.screen-header').should('contain.text', 'Profile & Preferences')
+      cy.get('.screen-header').should('contain.text', 'Profil & Préférences')
       cy.findByTestId('update-profile-form').should('be.visible')
 
       ;[
@@ -75,7 +75,7 @@ context('Profiles & Preferences', () => {
   it('has an option to show/hide album art overlay', () => {
     cy.$login()
     cy.$mockPlayback()
-    cy.$clickSidebarItem('Current Queue')
+    cy.$clickSidebarItem('File d\'attente actuelle')
     cy.get('#queueWrapper').within(() => cy.findByTestId('shuffle-library').click())
     cy.findByTestId('album-art-overlay').should('exist')
 

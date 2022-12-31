@@ -110,7 +110,7 @@ new class extends UnitTestCase {
       expect(emitMock).toHaveBeenCalledWith('SONGS_UPDATED')
     })
 
-    it('displays artist name if all songs have the same artist', async () => {
+    it('displays artist name if Toutes les prédications have the same artist', async () => {
       await this.renderComponent(factory<Song>('song', 4, {
         artist_id: 1000,
         artist_name: 'Led Zeppelin',

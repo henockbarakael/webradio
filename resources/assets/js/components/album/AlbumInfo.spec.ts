@@ -77,7 +77,7 @@ new class extends UnitTestCase {
       const playMock = this.mock(playbackService, 'queueAndPlay')
       await this.renderComponent()
 
-      await this.user.click(screen.getByTitle('Play all songs in IV'))
+      await this.user.click(screen.getByTitle('Lire toutes les prédications dans IV'))
       await this.tick(2)
 
       expect(fetchMock).toHaveBeenCalledWith(album)

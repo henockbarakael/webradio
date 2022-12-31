@@ -63,7 +63,7 @@ Cypress.Commands.add('$mockPlayback', () => {
 
 Cypress.Commands.add('$shuffleSeveralSongs', (count = 3) => {
   cy.$mockPlayback()
-  cy.$clickSidebarItem('All Songs')
+  cy.$clickSidebarItem('Toutes les prédications')
 
   cy.get('#songsWrapper').within(() => {
     cy.$getSongRowAt(0).click()

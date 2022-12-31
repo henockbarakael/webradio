@@ -1,7 +1,7 @@
 <template>
   <section class="recent">
     <h1>
-      Recently Played
+      Joué récemment
       <Btn
         v-if="songs.length"
         orange
@@ -9,7 +9,7 @@
         small
         @click.prevent="goToRecentlyPlayedScreen"
       >
-        View All
+        Tout afficher
       </Btn>
     </h1>
 

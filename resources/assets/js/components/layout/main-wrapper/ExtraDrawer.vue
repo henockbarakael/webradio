@@ -9,7 +9,7 @@
       <div class="bottom">
         <button
           v-koel-tooltip.left
-          :title="shouldNotifyNewVersion ? 'New version available!' : 'About Koel'"
+          :title="shouldNotifyNewVersion ? 'Nouvelle version disponible!' : 'Apropos de CMB Audio Player'"
           type="button"
           @click.prevent="openAboutKoelModal"
         >
@@ -17,7 +17,7 @@
           <span v-if="shouldNotifyNewVersion" class="new-version-notification" />
         </button>
 
-        <button v-koel-tooltip.left title="Log out" type="button" @click.prevent="logout">
+        <button v-koel-tooltip.left title="Déconnexion" type="button" @click.prevent="logout">
           <icon :icon="faArrowRightFromBracket" />
         </button>
 

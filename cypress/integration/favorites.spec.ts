@@ -6,7 +6,7 @@ context('Favorites', { scrollBehavior: false }, () => {
 
     cy.get('#favoritesWrapper')
       .within(() => {
-        cy.findByText('Songs You Love').should('be.visible')
+        cy.findByText('Prédications favorites avorites').should('be.visible')
         cy.findByText('Download All').should('be.visible')
 
         cy.$getSongRows().should('have.length', 3)
@@ -19,7 +19,7 @@ context('Favorites', { scrollBehavior: false }, () => {
       fixture: 'like.post.200.json'
     })
 
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper')
       .within(() => {
@@ -38,7 +38,7 @@ context('Favorites', { scrollBehavior: false }, () => {
       fixture: 'batch-like.post.200.json'
     })
 
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper')
       .within(() => {

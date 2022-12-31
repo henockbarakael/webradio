@@ -14,7 +14,7 @@
         <a
           v-if="allowDownload"
           role="button"
-          title="Download all songs in playlist"
+          title="Télécharger toutes les prédications in playlist"
           @click.prevent="download"
         >
           Download All

@@ -20,7 +20,7 @@
           v-if="allowDownload"
           class="download"
           role="button"
-          title="Download all songs in album"
+          title="Télécharger toutes les prédications in album"
           @click.prevent="download"
         >
           Download All

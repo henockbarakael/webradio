@@ -275,7 +275,7 @@ class PlaybackService {
   /**
    * Queue up songs (replace them into the queue) and start playing right away.
    *
-   * @param {?Song[]} songs  An array of song objects. Defaults to all songs if null.
+   * @param {?Song[]} songs  An array of song objects. Defaults to Toutes les prédications if null.
    * @param {Boolean=false}   shuffled Whether to shuffle the songs before playing.
    */
   public async queueAndPlay (songs: Song | Song[], shuffled = false) {

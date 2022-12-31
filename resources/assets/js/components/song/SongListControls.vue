@@ -7,11 +7,11 @@
             v-if="selectedSongs.length < 2 && songs.length"
             class="btn-play-all"
             orange
-            title="Play all songs"
+            title="Lire toutes les prédications"
             @click.prevent="playAll"
           >
             <icon :icon="faPlay" fixed-width />
-            All
+            Tout
           </Btn>
 
           <Btn
@@ -32,11 +32,11 @@
             class="btn-shuffle-all"
             data-testid="btn-shuffle-all"
             orange
-            title="Shuffle all songs"
+            title="Mélangez Toutes les prédications"
             @click.prevent="shuffle"
           >
             <icon :icon="faRandom" fixed-width />
-            All
+            Tout
           </Btn>
 
           <Btn
@@ -57,10 +57,10 @@
           ref="addToButton"
           green @click.prevent.stop="toggleAddToMenu"
         >
-          {{ showingAddToMenu ? 'Cancel' : 'Add To…' }}
+          {{ showingAddToMenu ? 'Annuler' : 'Ajouter à…' }}
         </Btn>
 
-        <Btn v-if="config.clearQueue" red title="Clear current queue" @click.prevent="clearQueue">Clear</Btn>
+        <Btn v-if="config.clearQueue" red title="Effacer La File d'attente actuelle" @click.prevent="clearQueue">Effacer</Btn>
       </BtnGroup>
 
       <BtnGroup v-if="config.refresh || config.deletePlaylist">

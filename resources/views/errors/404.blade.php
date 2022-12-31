@@ -1,4 +1,4 @@
 @extends('errors.template')
 
-@section('title', 'Not Found')
+@section('title', 'Non Trouvé')
 @section('details', $exception->getMessage())

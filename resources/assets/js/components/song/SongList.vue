@@ -29,7 +29,7 @@
         title="Sort by title"
         @click="sort('title')"
       >
-        Title
+        Titre
         <template v-if="config.sortable">
           <icon v-if="sortField === 'title' && sortOrder === 'asc'" :icon="faCaretDown" class="text-highlight" />
           <icon v-if="sortField === 'title' && sortOrder === 'desc'" :icon="faCaretUp" class="text-highlight" />
@@ -55,7 +55,7 @@
         title="Sort by song duration"
         @click="sort('length')"
       >
-        Time
+        Durée
         <template v-if="config.sortable">
           <icon v-if="sortField === 'length' && sortOrder === 'asc'" :icon="faCaretDown" class="text-highlight" />
           <icon v-if="sortField === 'length' && sortOrder === 'desc'" :icon="faCaretUp" class="text-highlight" />

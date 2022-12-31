@@ -1,7 +1,7 @@
 <template>
   <section id="queueWrapper">
     <ScreenHeader :layout="songs.length === 0 ? 'collapsed' : headerLayout">
-      Current Queue
+      File d'attente actuelle
       <ControlsToggle v-model="showingControls" />
 
       <template #thumbnail>
@@ -9,7 +9,7 @@
       </template>
 
       <template v-if="songs.length" #meta>
-        <span>{{ pluralize(songs, 'song') }}</span>
+        <span>{{ pluralize(songs, 'prédication') }}</span>
         <span>{{ duration }}</span>
       </template>
 
@@ -39,10 +39,10 @@
         <icon :icon="faCoffee" />
       </template>
 
-      No songs queued.
+      Aucune prédication en attente.
       <span v-if="libraryNotEmpty" class="d-block secondary">
-        How about
-        <a class="start" @click.prevent="shuffleSome">playing some random songs</a>?
+        Et si vous 
+        <a class="start" @click.prevent="shuffleSome">jouiez des prédications au hasard </a>?
       </span>
     </ScreenEmptyState>
   </section>

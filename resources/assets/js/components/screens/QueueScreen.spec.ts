@@ -40,7 +40,7 @@ new class extends UnitTestCase {
       const playMock = this.mock(playbackService, 'playFirstInQueue')
 
       this.renderComponent([])
-      await this.user.click(screen.getByText('playing some random songs'))
+      await this.user.click(screen.getByText('jouiez des prédications au hasard '))
 
       await waitFor(() => {
         expect(fetchRandomMock).toHaveBeenCalled()
@@ -53,7 +53,7 @@ new class extends UnitTestCase {
       this.renderComponent(songs)
       const playMock = this.mock(playbackService, 'queueAndPlay')
 
-      await this.user.click(screen.getByTitle('Shuffle all songs'))
+      await this.user.click(screen.getByTitle('Mélangez toutes les prédications'))
       await waitFor(() => expect(playMock).toHaveBeenCalledWith(songs, true))
     })
   }

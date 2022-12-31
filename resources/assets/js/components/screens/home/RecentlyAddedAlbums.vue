@@ -13,7 +13,7 @@
           <AlbumCard :album="album" layout="compact" />
         </li>
       </ol>
-      <p v-else class="text-secondary">No albums added yet.</p>
+      <p v-else class="text-secondary">Aucun album ajouté pour l'instant.</p>
     </template>
   </section>
 </template>

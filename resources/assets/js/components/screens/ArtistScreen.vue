@@ -19,7 +19,7 @@
           v-if="allowDownload"
           class="download"
           role="button"
-          title="Download all songs by this artist"
+          title="Télécharger toutes les prédications by this artist"
           @click.prevent="download"
         >
           Download All

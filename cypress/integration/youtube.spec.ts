@@ -16,7 +16,7 @@ context('YouTube', () => {
       fixture: 'youtube-search.get.200.json'
     })
 
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
     cy.get('#songsWrapper .song-item:first-child').dblclick()
 
     cy.get('#extra').within(() => {
@@ -30,7 +30,7 @@ context('YouTube', () => {
   it('plays a video when a search result is clicked', () => {
     cy.$mockPlayback()
 
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
     cy.get('#songsWrapper .song-item:first-child').dblclick()
 
     cy.get('#extra').within(() => {

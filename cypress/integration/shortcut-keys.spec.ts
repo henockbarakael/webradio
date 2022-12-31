@@ -9,10 +9,10 @@ context('Shortcut Keys', () => {
     cy.get('#searchForm [name=q]').should('be.focused')
   })
 
-  it('shuffles all songs by default when Space is pressed', () => {
+  it('shuffles Toutes les prédications by default when Space is pressed', () => {
     cy.fixture('data.get.200.json').then(data => {
       cy.get('body').type(' ')
-      cy.$assertSidebarItemActive('Current Queue')
+      cy.$assertSidebarItemActive('File d\'attente actuelle')
       cy.$assertPlaying()
       cy.get('#queueWrapper .screen-header').should('contain.text', `${data.songs.length} songs`)
     })

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <ScreenHeader layout="collapsed">Not Found</ScreenHeader>
+    <ScreenHeader layout="collapsed">Non Trouvé</ScreenHeader>
 
     <div class="main-scroll-wrap">
       <ScreenEmptyState>
@@ -8,7 +8,7 @@
           <icon :icon="faKiwiBird" :mask="faMap" transform="shrink-12" />
         </template>
 
-        The requested content cannot be found.
+        Le contenu demandé est introuvable.
       </ScreenEmptyState>
     </div>
   </section>

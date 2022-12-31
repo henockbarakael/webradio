@@ -74,7 +74,7 @@ context('Playlists', () => {
 
     cy.$assertPlaylistSongCount('Simple Playlist', 3)
 
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => {
       cy.$selectSongRange(0, 1)
@@ -98,7 +98,7 @@ context('Playlists', () => {
       fixture: 'playlist-songs.get.200.json'
     })
 
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => {
       cy.$selectSongRange(0, 2)

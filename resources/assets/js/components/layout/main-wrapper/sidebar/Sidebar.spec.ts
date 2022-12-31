@@ -7,13 +7,13 @@ import Sidebar from './Sidebar.vue'
 
 const standardItems = [
   'Home',
-  'Current Queue',
-  'All Songs',
+  'Queue',
+  'All songs',
   'Albums',
   'Artists',
   'Genres',
   'Favorites',
-  'Recently Played'
+  'Joué récemment'
 ]
 
 const adminItems = [...standardItems, 'Users', 'Upload', 'Settings']

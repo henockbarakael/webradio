@@ -8,11 +8,11 @@ context('Queuing', { scrollBehavior: false }, () => {
     cy.$login()
   })
 
-  it('allows shuffling all songs', () => {
-    cy.$clickSidebarItem('Current Queue')
+  it('allows shuffling Toutes les prédications', () => {
+    cy.$clickSidebarItem('File d\'attente actuelle')
 
     cy.get('#queueWrapper').within(() => {
-      cy.findByText('Current Queue').should('be.visible')
+      cy.findByText('File d\'attente actuelle').should('be.visible')
       cy.findByTestId('shuffle-library').click()
       cy.$getSongRows().should('have.length.at.least', MIN_SONG_ITEMS_SHOWN)
       cy.get('@rows').first().should('have.class', 'playing')
@@ -22,10 +22,10 @@ context('Queuing', { scrollBehavior: false }, () => {
   })
 
   it('clears the queue', () => {
-    cy.$clickSidebarItem('Current Queue')
+    cy.$clickSidebarItem('File d\'attente actuelle')
 
     cy.get('#queueWrapper').within(() => {
-      cy.findByText('Current Queue').should('be.visible')
+      cy.findByText('File d\'attente actuelle').should('be.visible')
       cy.findByTestId('shuffle-library').click()
       cy.$getSongRows().should('have.length.at.least', MIN_SONG_ITEMS_SHOWN)
       cy.get('.screen-header [data-testid=song-list-controls]').findByText('Clear').click()
@@ -34,7 +34,7 @@ context('Queuing', { scrollBehavior: false }, () => {
   })
 
   it('shuffles all from a song list screen', () => {
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => {
       cy.get('.screen-header [data-testid=btn-shuffle-all]').click()
@@ -70,14 +70,14 @@ context('Queuing', { scrollBehavior: false }, () => {
 
   it('queues a song when plays it', () => {
     cy.$shuffleSeveralSongs()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(function () {
       cy.$getSongRowAt(4).find('.title').invoke('text').as('title')
       cy.$getSongRowAt(4).dblclick()
     })
 
-    cy.$clickSidebarItem('Current Queue')
+    cy.$clickSidebarItem('File d\'attente actuelle')
     cy.get('#queueWrapper').within(function () {
       cy.$getSongRows().should('have.length', 4)
       cy.$getSongRowAt(1).find('.title').should('have.text', this.title)
@@ -91,11 +91,11 @@ context('Queuing', { scrollBehavior: false }, () => {
     cy.$shuffleSeveralSongs()
     cy.get('#queueWrapper .song-item:nth-child(1)').should('have.class', 'playing')
 
-    cy.findByTitle('Play next song').click({ force: true })
+    cy.findByTitle('Ecouter la prédication suivante').click({ force: true })
     cy.get('#queueWrapper .song-item:nth-child(2)').should('have.class', 'playing')
     cy.$assertPlaying()
 
-    cy.findByTitle('Play previous song').click({ force: true })
+    cy.findByTitle('Ecouter la prédication précédente').click({ force: true })
     cy.get('#queueWrapper .song-item:nth-child(1)').should('have.class', 'playing')
     cy.$assertPlaying()
   })

@@ -2,7 +2,7 @@
   <button
     v-koel-tooltip.top
     :class="{ active: mode !== 'NO_REPEAT' }"
-    :title="`Change repeat mode (current: ${readableMode})`"
+    :title="`Changer le mode de répétition (current: ${readableMode})`"
     data-testid="repeat-mode-switch"
     type="button"
     @click.prevent="changeMode"

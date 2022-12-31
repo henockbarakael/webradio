@@ -1,16 +1,8 @@
 <template>
   <div v-if="shown" class="support-bar" data-testid="support-bar">
     <p>
-      Loving Koel? Please consider supporting its development via
-      <a href="https://github.com/users/phanan/sponsorship" rel="noopener" target="_blank">GitHub Sponsors</a>
-      and/or
-      <a href="https://opencollective.com/koel" rel="noopener" target="_blank">OpenCollective</a>.
+      Sachez donc que ce salut de Dieu a été envoyé aux païens, et qu'ils l'écouteront.
     </p>
-    <button type="button" @click.prevent="close">Hide</button>
-    <span class="sep" />
-    <button type="button" @click.prevent="stopBugging">
-      Don't bug me again
-    </button>
   </div>
 </template>
 

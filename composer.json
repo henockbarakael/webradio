@@ -1,6 +1,6 @@
 {
   "name": "phanan/koel",
-  "description": "Personal audio streaming service that works.",
+  "description": "Difusion en direct des toutes les prédications du Centre Missionnaire de Binza",
   "keywords": [
     "audio",
     "stream",
@@ -46,7 +46,8 @@
     "fakerphp/faker": "^1.13",
     "slevomat/coding-standard": "^7.0",
     "nunomaduro/larastan": "^2.1",
-    "laravel/tinker": "^2.7"
+    "laravel/tinker": "^2.7",
+    "squizlabs/php_codesniffer": "^3.7"
   },
   "suggest": {
     "ext-zip": "Allow downloading multiple songs as Zip archives"

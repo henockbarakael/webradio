@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Most Played</h1>
+    <h1>Les plus joués</h1>
     <ol v-if="loading" class="top-song-list">
       <li v-for="i in 3" :key="i">
         <SongCardSkeleton />

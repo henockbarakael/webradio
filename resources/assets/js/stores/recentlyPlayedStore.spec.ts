@@ -6,7 +6,7 @@ import { recentlyPlayedStore, songStore } from '.'
 
 new class extends UnitTestCase {
   protected test () {
-    it('fetches the recently played songs', async () => {
+    it('fetches the Joué récemment songs', async () => {
       const songs = factory<Song>('song', 3)
       const getMock = this.mock(http, 'get').mockResolvedValue(songs)
       const syncMock = this.mock(songStore, 'syncWithVault', songs)

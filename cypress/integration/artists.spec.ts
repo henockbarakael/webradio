@@ -23,7 +23,7 @@ context('Artists', { scrollBehavior: false }, () => {
     })
   })
 
-  it('plays all songs by an artist', () => {
+  it('plays Toutes les prédications by an artist', () => {
     cy.$mockPlayback()
 
     cy.get('#artistsWrapper').within(() => {

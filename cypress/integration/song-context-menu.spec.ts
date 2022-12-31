@@ -2,7 +2,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
   it('plays a song via double-clicking', () => {
     cy.$mockPlayback()
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').dblclick().should('have.class', 'playing'))
     cy.$assertPlaying()
@@ -11,7 +11,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
   it('plays and pauses a song via context menu', () => {
     cy.$mockPlayback()
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').as('item').rightclick())
 
@@ -26,7 +26,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
 
   it('invokes album screen', () => {
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())
     cy.findByTestId('song-context-menu').within(() => cy.findByText('Go to Album').click())
@@ -39,7 +39,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
 
   it('invokes artist screen', () => {
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())
     cy.findByTestId('song-context-menu').within(() => cy.findByText('Go to Artist').click())
@@ -51,14 +51,14 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
   })
 
   ;([
-    { menuItem: 'After Current Song', queuedPosition: 2 },
-    { menuItem: 'Bottom of Queue', queuedPosition: 4 },
-    { menuItem: 'Top of Queue', queuedPosition: 1 }
+    { menuItem: 'Après la prédication en cours', queuedPosition: 2 },
+    { menuItem: 'En bas de la file d\'attente', queuedPosition: 4 },
+    { menuItem: 'Haut de la file d\'attente', queuedPosition: 1 }
   ]).forEach(config => {
     it(`queues a song to ${config.menuItem}`, () => {
       cy.$login()
       cy.$shuffleSeveralSongs()
-      cy.$clickSidebarItem('All Songs')
+      cy.$clickSidebarItem('Toutes les prédications')
 
       let songTitle
       cy.get('#songsWrapper').within(() => {
@@ -67,11 +67,11 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
       })
 
       cy.findByTestId('song-context-menu').within(() => {
-        cy.findByText('Add To').click()
+        cy.findByText('Ajouter à').click()
         cy.findByText(config.menuItem).click()
       })
 
-      cy.$clickSidebarItem('Current Queue')
+      cy.$clickSidebarItem('File d\'attente actuelle')
       cy.get('#queueWrapper').within(() => {
         cy.get('.song-item').should('have.length', 4)
         cy.get(`.song-item:nth-child(${config.queuedPosition}) .title`).should('have.text', songTitle)
@@ -91,7 +91,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
       cy.intercept('PUT', '/api/playlist/1/sync', {})
 
       cy.$login()
-      cy.$clickSidebarItem('All Songs')
+      cy.$clickSidebarItem('Toutes les prédications')
 
       cy.$assertPlaylistSongCount('Simple Playlist', 3)
       cy.get('#songsWrapper').within(() => {
@@ -104,7 +104,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
 
       cy.findByTestId('song-context-menu')
         .within(() => {
-          cy.findByText('Add To').click()
+          cy.findByText('Ajouter à').click()
           cy.findByText('Simple Playlist').click()
         })
 
@@ -114,11 +114,11 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
 
   it('does not have smart playlists as target for adding songs', () => {
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())
 
     cy.findByTestId('song-context-menu').within(() => {
-      cy.findByText('Add To').click()
+      cy.findByText('Ajouter à').click()
       cy.findByText('Smart Playlist').should('not.exist')
     })
   })
@@ -129,13 +129,13 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
     })
 
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
     cy.$assertFavoriteSongCount(3)
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())
     cy.findByTestId('song-context-menu').within(() => {
-      cy.findByText('Add To').click()
-      cy.findByText('Favorites').click()
+      cy.findByText('Ajouter à').click()
+      cy.findByText('Favoris').click()
     })
 
     cy.$assertFavoriteSongCount(4)
@@ -155,7 +155,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
     cy.intercept('/download/songs?*').as('download')
 
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())
     cy.findByTestId('song-context-menu').within(() => cy.findByText('Download').click())
@@ -165,7 +165,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
 
   it('does not have a Download item if download is not allowed', () => {
     cy.$login({ allowDownload: false })
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())
     cy.findByTestId('song-context-menu').within(() => cy.findByText('Download').should('not.exist'))
@@ -173,7 +173,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
 
   it('does not have an Edit item if user is not an admin', () => {
     cy.$loginAsNonAdmin()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())
     cy.findByTestId('song-context-menu').within(() => cy.findByText('Edit').should('not.exist'))
@@ -181,7 +181,7 @@ context('Song Context Menu', { scrollBehavior: false }, () => {
 
   it('copies a song\'s URL', () => {
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
 
     cy.window().then(window => cy.spy(window.document, 'execCommand').as('copy'))
     cy.get('#songsWrapper').within(() => cy.get('.song-item:first-child').rightclick())

@@ -9,7 +9,7 @@ import HomeScreen from './HomeScreen.vue'
 new class extends UnitTestCase {
   private async renderComponent () {
     this.render(HomeScreen)
-    await this.router.activateRoute({ path: 'home', screen: 'Home' })
+    await this.router.activateRoute({ path: 'accueil', screen: 'Home' })
   }
 
   protected test () {

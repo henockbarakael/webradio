@@ -5,7 +5,7 @@ context('Song Editing', { scrollBehavior: false }, () => {
     })
 
     cy.$login()
-    cy.$clickSidebarItem('All Songs')
+    cy.$clickSidebarItem('Toutes les prédications')
   })
 
   it('edits a song', () => {

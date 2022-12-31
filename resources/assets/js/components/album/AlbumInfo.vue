@@ -2,7 +2,7 @@
   <article :class="mode" class="album-info" data-testid="album-info">
     <h1 v-if="mode === 'aside'" class="name">
       <span>{{ album.name }}</span>
-      <button :title="`Play all songs in ${album.name}`" class="control" type="button" @click.prevent="play">
+      <button :title="`Lire toutes les prédications dans ${album.name}`" class="control" type="button" @click.prevent="play">
         <icon :icon="faCirclePlay" size="xl" />
       </button>
     </h1>

@@ -1,7 +1,7 @@
 <template>
   <form @submit.prevent="submit" @keydown.esc="maybeClose">
     <header>
-      <h1>New Playlist Folder</h1>
+      <h1>Nouveau Dossier De Playlist</h1>
     </header>
 
     <main>
@@ -10,7 +10,7 @@
           v-model="name"
           v-koel-focus
           name="name"
-          placeholder="Folder name"
+          placeholder="Nom du dossier"
           required
           type="text"
         >
@@ -18,8 +18,8 @@
     </main>
 
     <footer>
-      <Btn type="submit">Save</Btn>
-      <Btn white @click.prevent="maybeClose">Cancel</Btn>
+      <Btn type="submit">Enregistrer</Btn>
+      <Btn white @click.prevent="maybeClose">Annuler</Btn>
     </footer>
   </form>
 </template>

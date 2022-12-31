@@ -2,13 +2,13 @@
   <form @submit.prevent="submit" @keydown.esc="maybeClose">
     <header>
       <h1>
-        New Playlist
+        Nouvelle Playlist
         <span
           v-if="songs.length"
           data-testid="from-songs"
           class="text-secondary"
         >
-          from {{ pluralize(songs, 'song') }}
+          de {{ pluralize(songs, 'song') }}
         </span>
       </h1>
     </header>
@@ -16,18 +16,18 @@
     <main>
       <div class="form-row cols">
         <label class="name">
-          Name
+          Nom
           <input
             v-model="name"
             v-koel-focus
             name="name"
-            placeholder="Playlist name"
+            placeholder="Nom du playlist"
             required
             type="text"
           >
         </label>
         <label class="folder">
-          Folder
+          Dossier
           <select v-model="folderId">
             <option :value="null" />
             <option v-for="folder in folders" :key="folder.id" :value="folder.id">{{ folder.name }}</option>
@@ -37,8 +37,8 @@
     </main>
 
     <footer>
-      <Btn type="submit">Save</Btn>
-      <Btn white @click.prevent="maybeClose">Cancel</Btn>
+      <Btn type="submit">Enregistrer</Btn>
+      <Btn white @click.prevent="maybeClose">Annuler</Btn>
     </footer>
   </form>
 </template>

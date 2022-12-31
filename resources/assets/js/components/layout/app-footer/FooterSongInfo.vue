@@ -1,9 +1,9 @@
 <template>
   <div class="song-info" :class="{ playing: song?.playback_state === 'Playing' }">
-    <span :style="{ backgroundImage: `url('${cover}')` }" class="album-thumb" />
+    <span :style="{ backgroundImage: `url('img/cmkbinza.png')` }" class="album-thumb" />
     <div v-if="song" class="meta">
       <h3 class="title">{{ song.title }}</h3>
-      <a :href="`/#/artist/${song.artist_id}`" class="artist">{{ song.artist_name }}</a>
+      <a :href="`/#/predicateur/${song.artist_id}`" class="artist">{{ song.artist_name }}</a>
     </div>
   </div>
 </template>

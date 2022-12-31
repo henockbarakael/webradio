@@ -23,7 +23,7 @@ context.only('Albums', { scrollBehavior: false }, () => {
     })
   })
 
-  it('plays all songs in an album', () => {
+  it('Lire toutes les prédications de l\'album', () => {
     cy.$mockPlayback()
 
     cy.get('#albumsWrapper').within(() => {

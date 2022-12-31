@@ -22,7 +22,7 @@ new class extends UnitTestCase {
       const mock = this.mock(this.router, 'go')
       this.render(RecentlyPlayedSongs)
 
-      await this.user.click(screen.getByRole('button', { name: 'View All' }))
+      await this.user.click(screen.getByRole('button', { name: 'Tout afficher' }))
 
       expect(mock).toHaveBeenCalledWith('recently-played')
     })

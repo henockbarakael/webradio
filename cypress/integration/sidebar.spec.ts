@@ -1,13 +1,13 @@
 context('Sidebar Functionalities', () => {
   const commonMenuItems = [
-    ['Home', '/#!/home'],
+    ['Home', '/#!/accueil'],
     ['Current Queue', '/#!/queue'],
-    ['All Songs', '/#!/songs'],
+    ['All Songs', '/#!/predications'],
     ['Albums', '/#!/albums'],
-    ['Artists', '/#!/artists'],
+    ['Artists', '/#!/predicateurs'],
     ['YouTube Video', '/#!/youtube'],
-    ['Favorites', '/#!/favorites'],
-    ['Recently Played', '/#!/recently-played'],
+    ['Favorites', '/#!/Favorites'],
+    ['Joué récemment', '/#!/recently-played'],
     ['Simple Playlist', '/#!/playlist/1']
   ]
 

@@ -20,7 +20,7 @@ context('Home Screen', () => {
     })
   })
 
-  it('has a link to view all recently-played songs', () => {
+  it('has a link to Tout afficher recently-played songs', () => {
     cy.findByTestId('home-view-all-recently-played-btn').click().url().should('contain', '/#!/recently-played')
   })
 

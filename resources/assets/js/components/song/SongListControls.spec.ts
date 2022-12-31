@@ -30,7 +30,7 @@ new class extends UnitTestCase {
     it.each([[0], [1]])('shuffles all if %s songs are selected', async (selectedCount: number) => {
       const { emitted } = this.renderComponent(selectedCount)
 
-      await this.user.click(screen.getByTitle('Shuffle all songs'))
+      await this.user.click(screen.getByTitle('Mélangez toutes les prédications'))
 
       expect(emitted().playAll[0]).toEqual([true])
     })
@@ -39,7 +39,7 @@ new class extends UnitTestCase {
       const { emitted } = this.renderComponent(selectedCount)
 
       await this.user.keyboard('{Alt>}')
-      await this.user.click(screen.getByTitle('Play all songs'))
+      await this.user.click(screen.getByTitle('Lire toutes les prédications'))
       await this.user.keyboard('{/Alt}')
 
       expect(emitted().playAll[0]).toEqual([false])
@@ -66,7 +66,7 @@ new class extends UnitTestCase {
     it('clears queue', async () => {
       const { emitted } = this.renderComponent(0, 'Queue')
 
-      await this.user.click(screen.getByTitle('Clear current queue'))
+      await this.user.click(screen.getByTitle('Clear File d\'attente actuelle'))
 
       expect(emitted().clearQueue).toBeTruthy()
     })

@@ -42,7 +42,7 @@ new class extends UnitTestCase {
       const goMock = this.mock(this.router, 'go')
       await this.renderComponent()
 
-      await this.user.click(screen.getByTitle('Shuffle all songs'))
+      await this.user.click(screen.getByTitle('Mélangez toutes les prédications'))
 
       await waitFor(() => {
         expect(queueMock).toHaveBeenCalled()

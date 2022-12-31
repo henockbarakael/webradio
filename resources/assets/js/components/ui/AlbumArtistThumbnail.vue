@@ -50,8 +50,8 @@ const image = computed(() => {
 })
 
 const buttonLabel = computed(() => forAlbum.value
-  ? `Play all songs in the album ${entity.value.name}`
-  : `Play all songs by ${entity.value.name}`
+  ? `Lire toutes les prédications in the album ${entity.value.name}`
+  : `Lire toutes les prédications by ${entity.value.name}`
 )
 
 const { isAdmin: allowsUpload } = useAuthorization()

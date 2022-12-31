@@ -61,7 +61,7 @@ const save = async () => {
     await settingStore.update({ media_path: mediaPath.value })
     toastSuccess('Settings saved.')
     // Make sure we're back to home first.
-    go('home')
+    go('accueil')
     forceReloadWindow()
   } catch (err: any) {
     const msg = err.response.status === 422 ? parseValidationError(err.response.data)[0] : 'Unknown error.'

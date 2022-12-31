@@ -92,7 +92,7 @@ onMounted(async () => {
 })
 
 const init = async () => {
-  overlay.value!.show({ message: 'Just a little patience…' })
+  overlay.value!.show({ message: 'Juste un peu de patience...' })
 
   try {
     await commonStore.init()

@@ -38,7 +38,7 @@ new class extends UnitTestCase {
       const mock = this.mock(downloadService, 'fromArtist')
       this.renderComponent()
 
-      await this.user.click(screen.getByTitle('Download all songs by Led Zeppelin'))
+      await this.user.click(screen.getByTitle('Télécharger toutes les prédications by Led Zeppelin'))
       expect(mock).toHaveBeenCalledOnce()
     })
 
@@ -56,7 +56,7 @@ new class extends UnitTestCase {
 
       this.renderComponent()
 
-      await this.user.click(screen.getByTitle('Shuffle all songs by Led Zeppelin'))
+      await this.user.click(screen.getByTitle('Mélangez toutes les prédications by Led Zeppelin'))
       await this.tick()
 
       expect(fetchMock).toHaveBeenCalledWith(artist)

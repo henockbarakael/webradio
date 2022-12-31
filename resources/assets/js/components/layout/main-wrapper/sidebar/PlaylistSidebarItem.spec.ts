@@ -25,7 +25,7 @@ new class extends UnitTestCase {
       expect(emitMock).toHaveBeenCalledWith('PLAYLIST_CONTEXT_MENU_REQUESTED', expect.anything(), playlist)
     })
 
-    it.each<FavoriteList['name'] | RecentlyPlayedList['name']>(['Favorites', 'Recently Played'])
+    it.each<FavoriteList['name'] | RecentlyPlayedList['name']>(['Favorites', 'Joué récemment'])
     ('does not request context menu if not playlist', async (name) => {
       const list: FavoriteList | RecentlyPlayedList = {
         name,

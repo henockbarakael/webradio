@@ -27,7 +27,7 @@ new class extends UnitTestCase {
       this.renderComponent()
       const emitMock = this.mock(eventBus, 'emit')
 
-      await this.user.click(screen.getByTitle('Enter fullscreen mode'))
+      await this.user.click(screen.getByTitle('Entrer en mode plein écran'))
 
       expect(emitMock).toHaveBeenCalledWith('FULLSCREEN_TOGGLE')
     })
