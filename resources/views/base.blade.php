@@ -12,11 +12,11 @@
     <meta name="msapplication-navbutton-color" content="#282828">
 
     <base href="{{ asset('') }}">
-    <link rel="manifest" href="{{ static_url('manifest.json') }}"/>
-    <meta name="msapplication-config" content="{{ static_url('browserconfig.xml') }}"/>
-    <link rel="icon" type="image/png" href="{{ static_url('img/cmkbinza.png') }}"/>
-    <link rel="icon" type="image/png" href="{{ static_url('img/cmkbinza.png') }}">
-    <link rel="apple-touch-icon" type="image/png" href="{{ static_url('img/cmkbinza.png') }}">
+    <link rel="manifest" href="{{ asset('manifest.json') }}"/>
+    <meta name="msapplication-config" content="{{ asset('browserconfig.xml') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('img/cmkbinza.png') }}"/>
+    <link rel="icon" type="image/png" href="{{ asset('img/cmkbinza.png') }}">
+    <link rel="apple-touch-icon" type="image/png" href="{{ asset('img/cmkbinza.png') }}">
 
     <script>
         // Work around for "global is not defined" error with local-storage.js
